@@ -1,0 +1,277 @@
+.res-r-pandoras_fox_css .pagename a {
+  font-size: 0; }
+  .res-r-pandoras_fox_css .pagename a::before {
+    content: "/r/furry_irl";
+    font-size: 20px; }
+
+body.res-nightmode #header {
+  background-color: #333333; }
+body.res-nightmode .flair.flair-ohelig-is-gay {
+  border: 1px solid hotpink; }
+body.res-nightmode .flair.flair-general-rubbish {
+  border: 1px solid olivedrab; }
+body.res-nightmode ul.report-reasons {
+  color: #000; }
+body.res-nightmode .arrow {
+  height: 17px;
+  width: 18px; }
+  body.res-nightmode .arrow.upmod, body.res-nightmode .arrow.upmod:hover {
+    background: url(%%votes%%) repeat scroll 0px 0px; }
+  body.res-nightmode .arrow.up, body.res-nightmode .arrow.up:hover {
+    background: url(%%votes%%) repeat scroll 0px 50px; }
+  body.res-nightmode .arrow.down, body.res-nightmode .arrow.down:hover {
+    background: url(%%votes%%) repeat scroll 0px 17px; }
+  body.res-nightmode .arrow.downmod, body.res-nightmode .arrow.downmod:hover {
+    background: url(%%votes%%) repeat scroll 0px 34px; }
+body.res-nightmode #moderation_tools .icon-menu li {
+  background-color: transparent; }
+body.res-nightmode #sr-header-area {
+  background: rgba(0, 0, 0, 0.45);
+  border: none !important; }
+body.res-nightmode .content[role=main] {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  margin: 16px 342px 0 16px; }
+body.res-nightmode .side .titlebox, body.res-nightmode .side .sidecontentbox, body.res-nightmode .side .account-activity-box, body.res-nightmode .side .sidebox.create, body.res-nightmode .side .sidebox.submit, body.res-nightmode .side .linkinfo, body.res-nightmode .side .searchexpando {
+  background: transparent; }
+body.res-nightmode.listing-page .content[role="main"] .thing {
+  padding: 12px 0 8px 9px;
+  border-top: solid 1px rgba(0, 0, 0, 0.1); }
+
+.flair.flair-ohelig-is-gay {
+  border: 1px solid hotpink; }
+.flair.flair-general-rubbish {
+  border: 1px solid olivedrab; }
+
+.submit-page .side {
+  position: absolute;
+  left: calc(50% - -120px); }
+.submit-page .content[role="main"] {
+  width: fit-content;
+  position: absolute;
+  left: calc(50% - 470px); }
+.submit-page .footer-parent {
+  display: none; }
+
+body {
+  padding-left: 20px; }
+
+.login-form-side input[type="text"], .login-form-side input[type="password"], #search input[type="text"], .md textarea, textarea, body {
+  font-family: Segoe UI,Helvetica Neue,Helvetica,Arial,sans-serif; }
+
+#header {
+  background-image: url(%%2kbanner-whitebg%%);
+  width: 100vw;
+  height: 10.4166667vw;
+  background-size: cover;
+  margin-left: -20px;
+  border: none !important;
+  box-shadow: 0px 0.4em 0.3em rgba(140, 140, 140, 0.8);
+  background-color: #fff; }
+  #header #header-bottom-left {
+    padding-left: 0px; }
+  #header #header-bottom-right {
+    height: 30px;
+    line-height: 30px;
+    top: calc(10.4166667vw - 30px);
+    right: 0px;
+    padding: 0px;
+    z-index: 100;
+    background-color: transparent; }
+    #header #header-bottom-right a {
+      color: #ffffff; }
+  #header #header-img {
+    width: auto;
+    height: 9.2vw;
+    margin: 0;
+    bottom: 0;
+    position: relative;
+    z-index: 0; }
+  #header #sr-header-area {
+    background: rgba(0, 0, 0, 0.45);
+    border: none !important; }
+  #header #userbarToggle {
+    background-color: transparent;
+    border: 0px solid black; }
+    #header #userbarToggle.userbarShow {
+      left: -22px; }
+  #header .tabmenu {
+    background: transparent;
+    position: absolute;
+    top: calc(10.4166667vw - 30px);
+    left: 0px;
+    right: 0px;
+    min-height: 30px;
+    width: 100%;
+    margin-top: 0px;
+    z-index: 99;
+    text-align: center; }
+    #header .tabmenu a {
+      padding: 0px 20px;
+      border: none !important;
+      color: #ccc;
+      background-color: transparent;
+      height: 30px;
+      display: inline-block;
+      text-align: center;
+      vertical-align: middle;
+      line-height: 30px;
+      transition: all 0.25s ease-in-out; }
+    #header .tabmenu .selected a {
+      background-color: rgba(0, 0, 0, 0.25);
+      color: #ffffff; }
+    #header .tabmenu li a:hover {
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #ffeeee; }
+    #header .tabmenu li a[href*="/rising"], #header .tabmenu li a[href*="/controversial"], #header .tabmenu li a[href*="/wiki"], #header .tabmenu li a[href*="/ads"], #header .tabmenu li a#viewImagesButton, #header .tabmenu li.tb-metrics, #header .tabmenu li.tb-queuetools-tab {
+      display: none; }
+  #header::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: calc(10.4166667vw - 30px);
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 1; }
+
+.pagename {
+  position: absolute;
+  top: calc(10.4166667vw - 30px);
+  left: 0;
+  margin: 0 auto;
+  display: block;
+  font-variant: normal;
+  font-size: 0;
+  width: fit-content;
+  z-index: 100; }
+  .pagename a {
+    display: inline-block;
+    width: 150px;
+    height: 30px;
+    vertical-align: middle;
+    line-height: 30px;
+    font-size: 20px;
+    text-align: center;
+    transition: all 0.25s ease-in-out;
+    color: #faa;
+    background: transparent;
+    font-weight: bolder; }
+    .pagename a::before {
+      content: "/r/"; }
+  .pagename:hover a {
+    color: #ddd;
+    background-color: rgba(0, 0, 0, 0.25); }
+
+.entry {
+  padding-left: 5px; }
+
+.link {
+  margin-left: 0px;
+  padding: 10px 10px; }
+
+.entry {
+  margin-left: 5px; }
+
+.arrow {
+  height: 17px;
+  width: 18px; }
+
+.midcol {
+  width: 29px !important; }
+
+body.listing-page .content[role="main"] .thing {
+  padding: 12px 0 8px 9px;
+  border-top: solid 1px rgba(0, 0, 0, 0.1); }
+body.listing-page .content[role="main"] .sitetable.linklisting .thing:first-child {
+  border-top: solid 1px transparent; }
+
+.arrow {
+  height: 17px;
+  width: 18px; }
+  .arrow.upmod, .arrow.upmod:hover {
+    background: url(%%votes%%) repeat scroll 0px 0px; }
+  .arrow.up, .arrow.up:hover {
+    background: url(%%votes%%) repeat scroll 0px 50px; }
+  .arrow.down, .arrow.down:hover {
+    background: url(%%votes%%) repeat scroll 0px 17px; }
+  .arrow.downmod, .arrow.downmod:hover {
+    background: url(%%votes%%) repeat scroll 0px 34px; }
+
+.side {
+  background-color: transparent;
+  padding: 10px 10px 0 10px;
+  width: 318px; }
+  .side #search {
+    border: 0px none !important; }
+    .side #search input[type=text] {
+      width: 318px; }
+  .side .titlebox, .side .sidecontentbox, .side .account-activity-box, .side .sidebox.create, .side .sidebox.submit, .side .linkinfo, .side .searchexpando {
+    background: #f7cbcb;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    border: none; }
+  .side .sidebox .spacer {
+    background-color: transparent; }
+  .side .sidebox.submit {
+    padding: 0px; }
+    .side .sidebox.submit a {
+      padding: 8px; }
+    .side .sidebox.submit * {
+      height: auto; }
+  .side .spacer {
+    margin: 7px 0 12px 0; }
+    .side .spacer .titlebox {
+      background-color: #DEB4B4;
+      padding-right: 10px; }
+      .side .spacer .titlebox .users-online {
+        text-align: right; }
+        .side .spacer .titlebox .users-online span {
+          text-align: right; }
+      .side .spacer .titlebox h1 {
+        text-transform: capitalize !important;
+        text-align: center; }
+      .side .spacer .titlebox.fancy-toggle-button {
+        text-align: right; }
+  .side > .spacer {
+    box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.4); }
+
+.leavemoderator, .titlebox form.toggle {
+  background-color: #F7CBCB; }
+
+#moderation_tools .icon-menu li {
+  background-color: #F7CBCB; }
+  #moderation_tools .icon-menu li a {
+    background-color: transparent; }
+
+.morelink {
+  background: none;
+  background-color: #993333;
+  border: none; }
+  .morelink .nub {
+    background: none; }
+  .morelink a {
+    background: none;
+    border: none;
+    color: #ffffff; }
+  .morelink:hover {
+    background: none;
+    background-color: #E36666; }
+    .morelink:hover .nub {
+      background: none; }
+    .morelink:hover a {
+      background: none;
+      color: #000000;
+      border: none; }
+
+.content {
+  padding: 0px 10px !important; }
+  .content[role=main] {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    margin: 16px 342px 0 16px; }
+
+.beta-hint a {
+  margin-left: -30px;
+  height: 30px; }
+
+/*# sourceMappingURL=out.css.map */

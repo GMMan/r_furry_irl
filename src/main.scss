@@ -1,0 +1,468 @@
+// r/furry_irl sass stylesheet
+// this is going to be the initial migration from the old css sheet - no (major) changes, and everything will be in one file initially
+// things will be moved around some, and then broken up into their own files afterwards
+
+// debug things for my subreddit for testing changes on
+
+.res-r-pandoras_fox_css {
+	.pagename a {
+		font-size: 0;
+		&::before {
+			content: "/r/furry_irl";
+			font-size: 20px;
+		}
+	}
+}
+
+// res nightmode stuff
+
+body.res-nightmode {
+	#header {
+		background-color: rgb(51,51,51);
+	}
+
+	.flair { // honestly could just go and do `.res-nightmode .flair, .flair` in the flair selection
+	//              but I want to be able to break res nightmode into its own module later */
+		&.flair-ohelig-is-gay {
+			border: 1px solid hotpink;
+		}
+		&.flair-general-rubbish {
+			border: 1px solid olivedrab;
+		}
+	}
+
+	ul.report-reasons {
+		color: #000;
+	}
+
+	.arrow {
+		height: 17px;
+		width: 18px;
+
+		&.upmod, &.upmod:hover  {
+			background: url(%%votes%%) repeat scroll 0px 0px;
+		}
+		&.up, &.up:hover  {
+			background: url(%%votes%%) repeat scroll 0px 50px;
+		}
+		&.down, &.down:hover  {
+			background: url(%%votes%%) repeat scroll 0px 17px;
+		}
+		&.downmod, &.downmod:hover  {
+			background: url(%%votes%%) repeat scroll 0px 34px;
+		}
+	}
+
+	#moderation_tools .icon-menu li {
+		background-color: rgba(0,0,0,0);
+	}
+
+	#sr-header-area {
+		background: rgba(0,0,0,0.45);
+		border: none!important;
+	}
+
+	.content[role=main] {
+		box-shadow: 0 0 5px rgba(0,0,0,0.2);
+		margin: 16px 342px 0 16px;
+	}
+
+	.side {
+		.titlebox, .sidecontentbox, .account-activity-box, .sidebox.create, .sidebox.submit, .linkinfo, .searchexpando {
+			background: rgba(0,0,0,0);
+		}
+	}
+
+	&.listing-page .content[role="main"] .thing {
+		padding: 12px 0 8px 9px;
+		border-top: solid 1px rgba(0,0,0,0.1);
+	}
+}
+
+
+// flairs
+
+.flair {
+	&.flair-ohelig-is-gay {
+		border: 1px solid hotpink;
+	}
+	&.flair-general-rubbish {
+		border: 1px solid olivedrab;
+	}
+}
+
+// submit page stuff
+
+
+.submit-page {
+	.side {
+		position: absolute;
+		left: calc(50% - -120px); // dont ask me why i did this but i did
+	}
+
+	.content[role="main"] {
+		width: fit-content;
+		position: absolute;
+		left: calc(50% - 470px);
+	}
+
+	.footer-parent {
+		display: none; // sorry reddit
+	}
+}
+
+// begin general page stuff
+
+// * body padding
+
+body {
+	padding-left: 20px;
+}
+
+// * font
+
+.login-form-side input[type="text"], .login-form-side input[type="password"], #search input[type="text"], .md textarea, textarea, body {
+	font-family: Segoe UI,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+// * header stuff
+
+#header {
+	background-image: url(%%2kbanner-whitebg%%);
+	width: 100vw;
+	height: 10.4166667vw;
+	background-size: cover;
+
+	margin-left: -20px;
+	border: none!important;
+	box-shadow: 0px 0.4em 0.3em rgba(140, 140, 140, 0.8);
+	background-color: #fff;
+
+	#header-bottom-left {
+		padding-left: 0px;
+	}
+
+	#header-bottom-right {
+		height: 30px;
+		line-height: 30px;
+		top: calc(10.4166667vw - 30px);
+		right: 0px;
+		padding: 0px;
+		z-index: 100;
+		background-color: rgba(0,0,0,0);
+
+		a {
+			color: #ffffff;
+		}
+	}
+
+	#header-img {
+		width: auto;
+		height: 9.2vw;
+		margin: 0;
+		bottom: 0;
+		position: relative;
+		z-index: 0;
+	}
+
+	#sr-header-area {
+		background: rgba(0,0,0,0.45);
+		border: none!important;
+	}
+
+	#userbarToggle {
+		background-color: rgba(0,0,0,0);
+		border: 0px solid black;
+		&.userbarShow {
+			left: -22px;
+		}
+	}
+
+	.tabmenu {
+		background: rgba(0,0,0,0);
+		position: absolute;
+		top: calc(10.4166667vw - 30px);
+		left: 0px;
+		right: 0px;
+		min-height: 30px;
+		width: 100%;
+		margin-top: 0px;
+		z-index: 99;
+		text-align: center;
+
+		a {
+			padding: 0px 20px;
+			border: none !important;
+			color: #ccc;
+			background-color: rgba(0,0,0,0);
+			height: 30px;
+			display: inline-block;
+			text-align: center;
+			vertical-align: middle;
+			line-height: 30px;
+			transition: all 0.25s ease-in-out;
+		}
+
+		.selected a {
+			background-color: rgba(0,0,0,0.25);
+			color: #ffffff;
+		}
+
+		li {
+			a {
+				&:hover {
+					background-color: rgba(0,0,0,0.5);
+					color: #ffeeee;
+				}
+			}
+			a[href*="/rising"], a[href*="/controversial"] , a[href*="/wiki"], a[href*="/ads"], a#viewImagesButton, &.tb-metrics, &.tb-queuetools-tab {
+				display: none;
+			}
+		}
+	}
+
+	&::before {
+		content: "";
+		display: block;
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: calc(10.4166667vw - 30px);
+		height: 30px;
+		background-color: rgba(0,0,0,0.75);
+		z-index: 1;
+	}
+}
+
+// pagename stuff
+
+
+.pagename {
+	position: absolute;
+	top: calc(10.4166667vw - 30px);
+	left: 0;
+	margin: 0 auto;
+	display: block;
+	font-variant: normal;
+	font-size: 0;
+	width: fit-content;
+	z-index: 100;
+
+	a {
+		display: inline-block;
+		width: 150px;
+		height: 30px;
+		vertical-align: middle;
+		line-height: 30px;
+		font-size: 20px;
+		text-align: center;
+		transition: all 0.25s ease-in-out;
+		color: #faa;
+		background: rgba(0,0,0,0);
+		font-weight: bolder;
+		&::before {
+			content: "/r/";
+		}
+	}
+
+	&:hover {
+		a {
+			color: #ddd;
+			background-color: rgba(0,0,0,0.25);
+		}
+	}
+}
+
+// * main page tweaks
+
+
+.entry{
+	padding-left: 5px;
+}
+
+.link{
+	margin-left: 0px;
+	padding: 10px 10px;
+}
+
+.entry{
+	margin-left: 5px;
+}
+
+.arrow {
+	height: 17px;
+	width: 18px;
+}
+
+.midcol {
+	width: 29px!important;
+}
+
+.thumbnail.self{
+}
+
+body.listing-page .content[role="main"] {
+
+	.thing {
+		padding: 12px 0 8px 9px;
+		border-top: solid 1px rgba(0,0,0,0.1);
+	}
+
+	.sitetable.linklisting .thing:first-child {
+		border-top: solid 1px rgba(0,0,0,0);
+	}
+}
+
+// * arrows
+
+.arrow {
+	height: 17px;
+	width: 18px;
+
+	&.upmod, &.upmod:hover  {
+		background: url(%%votes%%) repeat scroll 0px 0px;
+	}
+	&.up, &.up:hover  {
+		background: url(%%votes%%) repeat scroll 0px 50px;
+	}
+	&.down, &.down:hover  {
+		background: url(%%votes%%) repeat scroll 0px 17px;
+	}
+	&.downmod, &.downmod:hover  {
+		background: url(%%votes%%) repeat scroll 0px 34px;
+	}
+}
+
+
+// * side stuff
+
+
+.side {
+	background-color: rgba(0,0,0,0);
+	padding: 10px 10px 0 10px;
+	width: 318px;
+
+	#search {
+		border: 0px none !important;
+		input[type=text] {
+			width: 318px;
+		}
+	}
+
+	.titlebox, .sidecontentbox, .account-activity-box, .sidebox.create, .sidebox.submit, .linkinfo, .searchexpando {
+		background: #f7cbcb;
+		box-shadow: 0 0 5px rgba(0,0,0,0.2);
+		padding: 16px;
+		border: none;
+	}
+
+	.sidebox {
+		.spacer {
+			background-color: rgba(0,0,0,0);
+		}
+		&.submit {
+			padding: 0px;
+			a {
+				padding: 8px;
+			}
+			* {
+				height: auto;
+			}
+		}
+	}
+
+	.spacer {
+		margin: 7px 0 12px 0;
+
+		.titlebox {
+			background-color: #DEB4B4;
+			padding-right: 10px;
+
+			.users-online {
+				text-align: right;
+				span {
+					text-align: right;
+				}
+			}
+
+			h1 {
+				text-transform: capitalize !important;
+				text-align: center;
+			}
+			&.fancy-toggle-button {
+				text-align: right;
+			}
+		}
+	}
+	&>.spacer {
+		box-shadow: 1px 5px 5px rgba(0,0,0,0.4);
+	}
+}
+
+// * miscellaneous (mod?) things
+
+// will figure this one out specifically later - I think it's just some mod stuff
+.leavemoderator, .titlebox form.toggle {
+	background-color: #F7CBCB;
+}
+
+#moderation_tools {
+	.icon-menu li {
+		background-color: #F7CBCB;
+		a {
+			background-color: rgba(0,0,0,0);
+		}
+	}
+}
+
+// submit buttons + 'create subreddit' things
+
+.morelink {
+	background: none;
+	background-color: #993333;
+	border: none;
+
+	.nub {
+		background: none;
+	}
+
+	a {
+		background: none;
+		border: none;
+		color: #ffffff;
+	}
+
+	&:hover {
+		background: none;
+		background-color: #E36666;
+
+		.nub {
+			background: none;
+		}
+
+		a {
+			background: none;
+			color: #000000;
+			border: none;
+		}
+	}
+}
+
+// content
+
+.content{
+	padding: 0px 10px !important;
+
+	&[role=main] {
+		box-shadow: 0 0 5px rgba(0,0,0,0.2);
+		margin: 16px 342px 0 16px;
+	}
+}
+
+// beta stuff
+
+.beta-hint a {
+	margin-left: -30px;
+	height: 30px;
+}
+
