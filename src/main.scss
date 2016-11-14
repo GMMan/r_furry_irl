@@ -91,12 +91,13 @@ body {
 	}
 
 	#header-img {
-		width: auto;
-		height: 9.2vw;
-		margin: 0;
-		bottom: 0;
-		position: relative;
-		z-index: 0;
+		display: none;
+		//width: auto;
+		//height: 9.2vw;
+		//margin: 0;
+		//bottom: 0;
+		//position: relative;
+		//z-index: 0;
 	}
 
 	#sr-header-area {
@@ -172,38 +173,17 @@ body {
 
 
 .pagename {
-	position: absolute;
-	top: calc(10.4166667vw - 30px);
-	left: 0;
-	margin: 0 auto;
-	display: block;
-	font-variant: normal;
-	font-size: 0;
-	width: fit-content;
-	z-index: 100;
-
 	a {
-		display: inline-block;
-		width: 150px;
-		height: 30px;
-		vertical-align: middle;
-		line-height: 30px;
-		font-size: 20px;
-		text-align: center;
-		transition: all 0.25s ease-in-out;
-		color: #faa;
-		background: rgba(0,0,0,0);
-		font-weight: bolder;
-		&::before {
-			content: "/r/";
-		}
-	}
-
-	&:hover {
-		a {
-			color: #ddd;
-			background-color: rgba(0,0,0,0.25);
-		}
+		color: transparent;
+		font-size: 1px;
+		width: 7.57vw;
+		height: 10vw;
+		background: url(%%boop%%) no-repeat;
+		position: absolute;
+		top: 19px;
+		left: 2px;
+		background-size: contain;
+		z-index: 100;
 	}
 }
 
