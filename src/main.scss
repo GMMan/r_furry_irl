@@ -63,7 +63,6 @@ body {
 
 #header {
 	background-image: url(%%2kbanner-whitebg%%);
-	width: 100vw;
 	height: 10.4166667vw;
 	background-size: cover;
 
@@ -253,7 +252,7 @@ body.listing-page .content[role="main"] {
 
 .side {
 	background-color: rgba(0,0,0,0);
-	padding: 10px 10px 0 10px;
+	padding: 10px 11px 0 10px;
 	width: 318px;
 
 	#search {
@@ -369,7 +368,7 @@ body.listing-page .content[role="main"] {
 
 	&[role=main] {
 		box-shadow: 0 0 5px rgba(0,0,0,0.2);
-		margin: 16px 342px 0 16px;
+		margin: 16px 343px 0 16px;
 	}
 }
 
